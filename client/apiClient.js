@@ -8,3 +8,7 @@ export function getFruits () {
       return res.body.fruits
     })
 }
+
+export function getFilms(){
+  return request.get('https://ghibliapi.herokuapp.com/films')
+}
