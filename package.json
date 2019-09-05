@@ -12,6 +12,7 @@
     "start": "run-s build server",
     "test": "jest --verbose --watchAll"
   },
+  
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -29,8 +30,10 @@
     ]
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.5",
     "express": "^4.16.4",
+    "node-sass": "^4.12.0",
     "react-bulma-components": "^2.3.0"
   },
   "devDependencies": {
