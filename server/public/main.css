@@ -1,0 +1,19 @@
+
+header .title {
+    text-align: center;
+    font-size: 50px;
+}
+
+header .subtitle {
+    text-align: center;
+    font-size: 25px;
+}
+
+header {
+    /* background: url('header2.jpg');
+    background-repeat: repeat-x;
+    width: 100%;
+    color: azure; */
+    font-family: 'Chilanka', cursive;
+}
+
