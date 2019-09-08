@@ -31,7 +31,9 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bulma": "^0.7.5",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "knex": "^0.19.3",
+    "sqlite3": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -55,5 +57,19 @@
     "webpack": "4",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.2.1"
-  }
+  },
+  "description": "To get started:",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roa-2019/July-personalProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/roa-2019/July-personalProject/issues"
+  },
+  "homepage": "https://github.com/roa-2019/July-personalProject#readme"
 }
