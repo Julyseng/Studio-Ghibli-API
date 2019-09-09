@@ -16,10 +16,11 @@ body {
     background-color: rgb(253,231,214)
 }
 
-
 .card {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
-    grid-gap: 0.5em;
+    background-color: blue;
 }
 
+img {
+    height: 400px;
+    width: 350px;
+}
