@@ -1,10 +1,9 @@
-
-header .title {
+.title {
     text-align: center;
     font-size: 50px;
 }
 
-header .subtitle {
+ .subtitle {
     text-align: center;
     font-size: 25px;
 }
@@ -17,7 +16,10 @@ body {
     background-color: rgb(253,231,214)
 }
 
-/* #app {
-    
-} */
+
+.card {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-gap: 0.5em;
+}
 
