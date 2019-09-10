@@ -2,13 +2,13 @@ import request from 'superagent'
 
 const rootUrl = '/api/v1'
 
-export function getFruits () {
-  return request.get(rootUrl + '/fruits')
+export function getfilms () {
+  return request.get(rootUrl + '/films')
     .then(res => {
-      return res.body.fruits
+      return res.body.films
     })
 }
 
-export function getFilms(){
-  return request.get('https://ghibliapi.herokuapp.com/films')
-}
+// export function getFilms(){
+//   return request.get('/api/v1/films')
+// }

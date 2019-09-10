@@ -3,7 +3,9 @@ const config = require('../knexfile')[env]
 const db = require('knex')(config)
 
 module.exports = {
-  getFilms
+  getFilms,
+  saveFilms,
+  deleteFilms
 }
 
 
@@ -11,6 +13,14 @@ function getFilms () {
   return db('films').select()
 }
 
-function postFilms () {
-  return db('films').insert({films_id: films.id, })
+// function postFilms () {
+//   return db('films').insert({films_id: films.id, })
+// }
+
+function saveFilms(films) {
+  return db('films').insert(films)
+}
+
+function deleteFilms() {
+  return db('films').delete()
 }
