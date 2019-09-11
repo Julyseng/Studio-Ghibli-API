@@ -17,10 +17,44 @@ body {
 }
 
 .card {
-    background-color: blue;
+    background-color: seashell;
 }
 
 img {
     height: 400px;
     width: 350px;
 }
+
+/* Navbar components */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(96, 170, 188);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-family: 'Modak', cursive;   
+    font-size: 30px; 
+  }
+  
+  li a:hover {
+    background-color: #c99789;
+  }
+  
+  .active {
+    background-color: #c99789;
+  }
