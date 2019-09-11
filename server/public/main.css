@@ -16,13 +16,11 @@ body {
     background-color: rgb(253,231,214)
 }
 
-.card {
-    background-color: seashell;
-}
 
-img {
-    height: 400px;
-    width: 350px;
+Img {
+    width: 80%;
+    height: 70%;
+    margin: 40px;
 }
 
 /* Navbar components */
@@ -47,7 +45,7 @@ ul {
     text-align: center;
     padding: 20px 25px;
     text-decoration: none;
-    font-family: 'Modak', cursive;   
+    font-family: 'Courgette', cursive;   
     font-size: 30px; 
   }
   
