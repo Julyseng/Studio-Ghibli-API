@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-import {getFilms} from '../apiClient'
+import { getFilms } from '../apiClient'
 
 class Display extends React.Component {
     state = {
@@ -10,12 +10,12 @@ class Display extends React.Component {
 
     componentDidMount = () => {
         getFilms()
-        .then ((result) => {
-            this.setState({
-                films: result.body
-            })
+            .then((result) => {
+                this.setState({
+                    films: result.body
+                })
 
-        })
+            })
     }
 
     incrementLikes = () => {
@@ -27,21 +27,24 @@ class Display extends React.Component {
     render() {
         console.log(this.state.films)
         return (
-            <React.Fragment>
+            <div className='card-group'>
                 {/* img 1 */}
-                {this.state.films.map((film, i) => 
-                <Card className="card-container" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={film.img} />
-                    <Card.Body>
-                        <Card.Title>{film.title}</Card.Title>
-                        <Card.Text>
-                            {film.producer}
-                        </Card.Text>
-                        <Button onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button>
-                    </Card.Body>
-                </Card>)}
-                
-            </React.Fragment>
+                {this.state.films.map((film, i) =>
+                    <Card className="card-container" style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={film.img} />
+                        <Card.Body>
+                            <Card.Title> Title : {film.title} </Card.Title>
+                            <Card.Text> Producer: {film.producer} </Card.Text>
+                            <Card.Text> Director: {film.director} </Card.Text>
+                            <Card.Text> Release Date: {film.release_date} </Card.Text>
+                            <Card.Text> rt_score: {film.rt_score} </Card.Text>
+                            <Button className="button" onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button> 
+
+                            
+                        </Card.Body>
+                    </Card>)}
+
+            </div>
 
         )
     }
