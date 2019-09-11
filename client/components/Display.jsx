@@ -1,26 +1,30 @@
 import React from 'react'
+import { Card, Button } from 'react-bootstrap'
+// import films from '../import'
 
+class Display extends React.Component {
+    state = {
+        count: 0
+    }
+    render() {
+        return (
+            <React.Fragment>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="../../castle.jpg" />
+                    <Card.Body>
+                        <Card.Title>Castle in the Sky</Card.Title>
+                        <Card.Text>
+                            film description go here
+                        </Card.Text>
+                        <Button> ❤️ Likes {this.state.count} </Button>
+                    </Card.Body>
+                </Card>
+            </React.Fragment>
 
-function Display() {
-    return (
-        <React.Fragment>
-            <div className='card'>
-                <div className='card-image'>
-                    <img src="../../castle.jpg" alt="castle" />
-                </div>
-                <div className="media-content">
-                    <p className="h3">John Smith</p>
-                    <p className="h4">@johnsmith</p>
-                </div>
-            </div>
-
-        </React.Fragment>
-    )
+        )
+    }
 }
 export default Display
-
-
-
 
 // className Form extends React.Component {
 
