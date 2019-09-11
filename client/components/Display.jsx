@@ -25,12 +25,13 @@ class Display extends React.Component {
         })
     }
     render() {
-        console.log(this.state.films)
         return (
+            
+            <div>
+                <p className='display-message'> All Studio Ghibli films produced  </p> 
             <div className='card-group'>
-                {/* img 1 */}
                 {this.state.films.map((film, i) =>
-                    <Card className="card-container" style={{ width: '18rem' }}>
+                    <Card className="card-container" key={film.id} style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={film.img} />
                         <Card.Body>
                             <Card.Title> Title : {film.title} </Card.Title>
@@ -42,10 +43,10 @@ class Display extends React.Component {
 
                             
                         </Card.Body>
-                    </Card>)}
+                    </Card> )}
 
             </div>
-
+            </div>
         )
     }
 }

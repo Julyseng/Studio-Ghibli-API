@@ -6,6 +6,3 @@ export function getFilms () {
   return request.get(rootUrl + '/films')
 }
 
-// export function getFilms(){
-//   return request.get('/api/v1/films')
-// }

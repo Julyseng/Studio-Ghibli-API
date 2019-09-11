@@ -40,6 +40,13 @@ Img {
     margin: 20px;
 
 }
+
+.display-message {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  color: white;
+}
 .card-group{
     display: flex;
     flex-wrap: wrap;   
@@ -90,6 +97,14 @@ ul {
     background-color: rgb(41, 134, 116)
   }
   
-  /* .active {
-    background-color: #c99789;
-  }  */
+  .leaveComment .comment-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaveComment {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+  color: white;
+}
