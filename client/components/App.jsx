@@ -7,12 +7,7 @@ class App extends React.Component {
   state = {
     films: []
   }
-  // componentDidMount() {
-  //   getFilms()
-  //     .then(res => {
-  //       this.setState({ films: res.body })
-  //     })
-  // }
+
   render() {
     return (
 
@@ -21,11 +16,10 @@ class App extends React.Component {
          <header>
           <h1 className='title'>Studio Ghibli Films</h1>
           <h2 className='subtitle'> ~ Better Than Disney ~ </h2>
-        
+          <Navs />
         </header>
-        <Navs />
+        
         <Display />
-      
       </React.Fragment>
       
     )
@@ -33,19 +27,3 @@ class App extends React.Component {
 }
 
 export default App
-
-// to go with film title 
-// <p> {film.description} </p> 
-        {/* <header>
-          <h1 className='title'>Studio Ghibli Films</h1>
-          <h2 className='subtitle'> ~ Better Than Disney ~ </h2>
-        </header>
-
-        {/* content  */}
-        {/* <div className='body'>
-          <ol>
-            {this.state.films.map(film => (
-              <li key={film.id}>{film.title}</li>
-            ))}
-          </ol>
-        </div> */}

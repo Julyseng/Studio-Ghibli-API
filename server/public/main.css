@@ -11,6 +11,9 @@
 header {
     font-family: 'Chilanka', cursive;
     color: seashell;
+    position: relative;
+    background: url(./headerhouse.jpg);
+    margin: 20px;
 }
 
 body {
@@ -49,14 +52,18 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(235, 101, 108);
+    /* background-color: rgb(235, 101, 108); */
     /* position: -webkit-sticky; Safari */
-    position: sticky;
-    top: 0;
+    /* position: absolute;
+    bottom: 0; */
+    display: flex;
+    justify-content: center;
   }
   
   li {
     float: left;
+    text-align: center;
+
 
   }
   
@@ -67,7 +74,7 @@ ul {
     padding: 20px 25px;
     text-decoration: none;
     font-family: 'Courgette', cursive;   
-    font-size: 30px; 
+    font-size: 40px; 
   }
   
   li a:hover {
