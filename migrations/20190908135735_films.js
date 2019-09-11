@@ -9,6 +9,7 @@ exports.up = function(knex) {
         t.string('director')
         t.integer('release_date')
         t.integer('rt_score')
+        t.string('img')
     })
 };
 
