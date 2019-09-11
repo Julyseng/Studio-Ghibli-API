@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('films', t => {
-        t.increments('id'). AUTO_INCREMENT
+        t.increments('id')
         t.integer('film_id')
         t.string('title')
         t.string('description')
