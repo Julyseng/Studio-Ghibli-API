@@ -1,24 +1,46 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
-// import films from '../import'
+import {getFilms} from '../apiClient'
 
 class Display extends React.Component {
     state = {
+        films: [],
         count: 0
     }
+
+    componentDidMount = () => {
+        getFilms()
+        .then ((result) => {
+            this.setState({
+                films: result.body
+            })
+
+        })
+    }
+
+    incrementLikes = () => {
+        let newCount = this.state.count + 1
+        this.setState({
+            count: newCount
+        })
+    }
     render() {
+        console.log(this.state.films)
         return (
             <React.Fragment>
-                <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="../../castle.jpg" />
+                {/* img 1 */}
+                {this.state.films.map((film, i) => 
+                <Card className="card-container" style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={film.img} />
                     <Card.Body>
-                        <Card.Title>Castle in the Sky</Card.Title>
+                        <Card.Title>{film.title}</Card.Title>
                         <Card.Text>
-                            film description go here
+                            {film.producer}
                         </Card.Text>
-                        <Button> ❤️ Likes {this.state.count} </Button>
+                        <Button onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button>
                     </Card.Body>
-                </Card>
+                </Card>)}
+                
             </React.Fragment>
 
         )
