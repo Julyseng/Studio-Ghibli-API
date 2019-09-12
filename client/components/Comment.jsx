@@ -1,75 +1,49 @@
 import React from 'react'
-import { getFilms } from '../apiClient'
-
-const defaultState = {
-    name: ' ',
-    comment: '',
-    title: '',
-    date: null
-}
+import { postfilms } from '../apiClient'
 
 
-
-class Comment extends React.Component {
+export default class Comment extends React.Component {
     state = {
-        ...defaultState
+       comment: ''
     }
 
-    componentDidMount = () => {
-        getFilms()
-            .then((result) => {
-                this.setState({
-                    films: result.body
-                })
-
-            })
+    handleChange = (e) => {
+        const value = e.target.value
+        this.setState({comment: value})
     }
 
-
-    handleSubmit = evt => {
-        this.props.saveItem(this.state)
-        this.setState({ ...defaultState })
-        evt.preventDefault()
+    handleSubmit= (e) => {
+        e.prevenDefault()
+        const data = { 
+            comment: this.state.comment
+        }
+        postfilms(data)
     }
-
-    handleChange = evt => {
-        const { name, value } = evt.target
-        this.setState({
-            [name]: value,
-            [comment]: value,
-            [title]: value,
-            [date]: value
-        })
-    }
+        
+    
 
     render() {
-        const { name, comment, title, date } = this.state
         return (
             <React.Fragment> 
-                <div className='leaveComment'> ~~ Leave Comments on your Favourite Films ~~ </div>
-            <form className='comment-section' onSubmit={this.handleSubmit} >
-                <label htmlFor='name'>Name:  </label>
-                <input type='text' name='name'
-                    className='u-full-width'
-                    onChange={this.handleChange}
-                    value={name} />
-
-                <label htmlFor='Comment'>Comment: </label>
-                <input type="text" name='comment'
-                    className='u-full-width'
-                    onChange={this.handleChange}
-                    value={comment} />
-
-                <label htmlFor='title'> Choose Film: </label>
-                <select name='title' className='u-full-width' onChange={this.handleChange} value={title}>
-
-                </select>
-                <input type='submit' className='button-primary' value='Add' />
-            </form>
+                <div className='leaveComment'> ~~ Leave Comments on your Favourite Films ~~ 
+                <form onSubmit={this.handleSubmit}>
+                    <div className='control'> 
+                    <input className='input is-rounded'
+                            type='text'
+                            name='comment'
+                            placeholder='leave a comment'
+                            value={this.state.comment}
+                            onChange={this.handleChange}
+                            />
+                    </div>
+                    <div className='control'>
+                        <input className='submit-button' type='submit' value='Submit'/>
+                    </div>
+                </form>
+                </div>
             </React.Fragment>
         )
     }
 
 }
 
-export default Comment 

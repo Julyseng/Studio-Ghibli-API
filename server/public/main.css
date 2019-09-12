@@ -108,3 +108,9 @@ ul {
   font-family: 'Fredoka One', cursive;
   color: white;
 }
+
+.leaveComment form .control .submit-button{
+  margin: 10px;
+  background-color: rgb(41, 134, 116);
+}
+

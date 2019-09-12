@@ -17,7 +17,7 @@ class Display extends React.Component {
 
             })
     }
-
+    
     incrementLikes = () => {
         let newCount = this.state.count + 1
         this.setState({
@@ -26,26 +26,24 @@ class Display extends React.Component {
     }
     render() {
         return (
-            
+
             <div>
-                <p className='display-message'> All Studio Ghibli films produced  </p> 
-            <div className='card-group'>
-                {this.state.films.map((film, i) =>
-                    <Card className="card-container" key={film.id} style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={film.img} />
-                        <Card.Body>
-                            <Card.Title> Title : {film.title} </Card.Title>
-                            <Card.Text> Producer: {film.producer} </Card.Text>
-                            <Card.Text> Director: {film.director} </Card.Text>
-                            <Card.Text> Release Date: {film.release_date} </Card.Text>
-                            <Card.Text> rt_score: {film.rt_score} </Card.Text>
-                            <Button className="button" onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button> 
+                <p className='display-message'> All Studio Ghibli films produced  </p>
+                <div className='card-group'>
+                    {this.state.films.map((film, i) =>
+                        <Card className="card-container" key={film.id} style={{ width: '18rem' }}>
+                            <Card.Img variant="top" src={film.img} />
+                            <Card.Body>
+                                <Card.Title> Title : {film.title} </Card.Title>
+                                <Card.Text> Producer: {film.producer} </Card.Text>
+                                <Card.Text> Director: {film.director} </Card.Text>
+                                <Card.Text> Release Date: {film.release_date} </Card.Text>
+                                <Card.Text> rt_score: {film.rt_score} </Card.Text>
+                                <Button className="button" onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button>
+                            </Card.Body>
+                        </Card>)}
 
-                            
-                        </Card.Body>
-                    </Card> )}
-
-            </div>
+                </div>
             </div>
         )
     }
