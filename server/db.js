@@ -6,7 +6,9 @@ module.exports = {
   getFilms,
   saveFilms,
   deleteFilms,
-  postComments
+  getFilms,
+  postComments,
+  getComments
 }
 
 
@@ -22,6 +24,11 @@ function deleteFilms() {
   return db('films').delete()
 }
 
-function postComments(comments) {
-  return db('comments').insert(comments)
+
+function getComments () {
+  return db('comments').select()
 }
+function postComments(data) {
+  return db('comments').insert(data)
+}
+

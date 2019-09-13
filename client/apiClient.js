@@ -7,6 +7,7 @@ export function getFilms () {
 }
 
 export function postComments (data) {
+  console.log(data)
   return request.post(rootUrl + '/postComment')
   .send(data)
   .catch(e => { console.log(e)})

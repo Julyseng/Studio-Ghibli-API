@@ -1,6 +1,6 @@
 import React from 'react'
 import { postComments } from '../apiClient'
-
+import { getFilms } from '../apiClient'
 
 
 export default class Comment extends React.Component {
@@ -9,9 +9,20 @@ export default class Comment extends React.Component {
        name: '',
        film_title: '',
        comment: '',
-       date: Date
-        }
+       Created: undefined
+        },
+        films : [ ]
     }
+    componentDidMount = () => {
+        getFilms()
+            .then((result) => {
+                this.setState({
+                    films: result.body
+                })
+
+            })
+    }
+    
 
     handleChange = (e) => {
         let { name, value } = e.target
@@ -19,7 +30,7 @@ export default class Comment extends React.Component {
         this.setState({ 
             data: {
                 ...this.state.data,
-                [name] : value 
+               [name] : value 
             }
         })
     }
@@ -28,12 +39,14 @@ export default class Comment extends React.Component {
         e.preventDefault()
 
         postComments (this.state.data)
-        // console.log(this.state.data)
+        .then(() => {
+            console.log('comment is saved')
+        })
     }
         
     render() {
-        console.log(this.state.data)
-       let {name, film_Title, comment, created} = this.state.data
+        // console.log(this.state.data)
+       let {name, film_title, comment, Created} = this.state.data
         return (
             <React.Fragment> 
                 <div className='leaveComment'> 
@@ -50,13 +63,20 @@ export default class Comment extends React.Component {
                             />
                     
                     <label className='Film-title'>film_Title: </label> 
-                    <input className='input is-rounded'
+                    <select name='film_title' className='select-title' onChange={this.handleChange} value={film_title}> 
+                    {this.state.films.map(film => (
+                        <option key={film.id} value={film.title}> {film.title} </option>
+                    ))}
+
+
+                    </select>
+                    {/* <input className='input is-rounded'
                             type='select'
                             name='film_title'
                             placeholder='title'
                             value={film_Title}
                             onChange={this.handleChange}
-                            />
+                            /> */}
 
                     <label className='Form-comment'>Comment: </label> 
                     <input className='input is-rounded'
@@ -71,7 +91,7 @@ export default class Comment extends React.Component {
                     <input className='input is-rounded'
                             type='date'
                             name='Created'
-                            value={created}
+                            value={Created}
                             onChange={this.handleChange}
                             />
                     
