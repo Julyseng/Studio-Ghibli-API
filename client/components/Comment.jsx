@@ -49,7 +49,7 @@ export default class Comment extends React.Component {
        let {name, film_title, comment, Created} = this.state.data
         return (
             <React.Fragment> 
-                <div className='leaveComment'> 
+                <div className='form-group'> 
                 
                 <form  onSubmit={this.handleSubmit}>
                     <div className='control'>
@@ -70,14 +70,6 @@ export default class Comment extends React.Component {
 
 
                     </select>
-                    {/* <input className='input is-rounded'
-                            type='select'
-                            name='film_title'
-                            placeholder='title'
-                            value={film_Title}
-                            onChange={this.handleChange}
-                            /> */}
-
                     <label className='Form-comment'>Comment: </label> 
                     <input className='input is-rounded'
                             type='textArea'

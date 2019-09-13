@@ -102,16 +102,17 @@ ul {
   flex-direction: column;
 }
 
-.leaveComment {
+/* .leaveComment {
   font-size: 30px;
   text-align: center;
   font-family: 'Fredoka One', cursive;
   color: white;
-}
+} */
 
-.leaveComment form {
-  margin: 10px;
-  display: block;
+.form-group {
+  margin: 20px;
+  display: flex;
   flex-direction: column;
+  position: relative; 
 }
 
