@@ -27,17 +27,7 @@ export default class PostComments extends React.Component {
                     {this.state.comments.map((comment, i) => {
                         return (
                             <div className="row">
-                                <div className="col-xl-4 col-sm-6">
-                                    <div className="card card-dimensions zoom mb-4 shadow">
-                                        <div >
-                                            <img className="card-img-top card-img-top-dimensions" src={comment.url}></img>
-                                            <div className="card-body">
-                                                <p className="card-title text-center">{comment.text}</p>
-                                                <br />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            {/* post comments from form  */}
                             </div>
                         )
                     })}
