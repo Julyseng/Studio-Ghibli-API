@@ -109,8 +109,9 @@ ul {
   color: white;
 }
 
-.leaveComment form .control .submit-button{
+.leaveComment form {
   margin: 10px;
-  background-color: rgb(41, 134, 116);
+  display: block;
+  flex-direction: column;
 }
 

@@ -16,7 +16,7 @@ class App extends React.Component {
       <React.Fragment>
          <header>
           <h1 className='title'>Studio Ghibli Films</h1>
-          {/* <h2 className='subtitle'> ~ Better Than Disney ~ </h2> */}
+          <h2 className='subtitle'> ~ Better Than Disney ~ </h2>
 
           <Navs />
         </header>

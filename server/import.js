@@ -47,5 +47,3 @@ request.get('https://ghibliapi.herokuapp.com/films')
         })
 })
 
-//google reset auto increment 
-//practice charlotte web 
