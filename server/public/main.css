@@ -96,23 +96,25 @@ ul {
    li a:hover {
     background-color: rgb(41, 134, 116)
   }
-  
-  .leaveComment .comment-section {
+
+
+
+.control {
+  margin: 30px;
   display: flex;
   flex-direction: column;
 }
 
-/* .leaveComment {
-  font-size: 30px;
-  text-align: center;
-  font-family: 'Fredoka One', cursive;
-  color: white;
-} */
+.input-area {
+  margin: auto;
 
-.form-group {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative; 
+}
+
+.select-title {
+  margin: auto;
+}
+
+.submit-button {
+  margin: auto;
 }
 

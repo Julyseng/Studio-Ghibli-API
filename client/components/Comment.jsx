@@ -49,12 +49,12 @@ export default class Comment extends React.Component {
        let {name, film_title, comment, Created} = this.state.data
         return (
             <React.Fragment> 
-                <div className='form-group'> 
+                {/* <div className='form-group'>  */}
                 
-                <form  onSubmit={this.handleSubmit}>
+                <form  clasName='form-section' onSubmit={this.handleSubmit}>
                     <div className='control'>
                     <label className='Form-name'>Name: </label> 
-                    <input className='input is-rounded'
+                    <input className='input-area'
                             type='text'
                             name='name'
                             placeholder='name'
@@ -71,7 +71,7 @@ export default class Comment extends React.Component {
 
                     </select>
                     <label className='Form-comment'>Comment: </label> 
-                    <input className='input is-rounded'
+                    <input className='input-area'
                             type='textArea'
                             name='comment'
                             placeholder='leave a comment'
@@ -80,7 +80,7 @@ export default class Comment extends React.Component {
                             />
 
                     <label className='submit-date'>Created: </label>        
-                    <input className='input is-rounded'
+                    <input className='input-area'
                             type='date'
                             name='Created'
                             value={Created}
@@ -88,11 +88,12 @@ export default class Comment extends React.Component {
                             />
                     
                     </div>
+                    
                     <div className='control'>
                     <input className='submit-button' type='submit' value='Submit' /> 
                     </div>
                 </form>
-                </div>
+                {/* </div> */}
             </React.Fragment>
         )
     }

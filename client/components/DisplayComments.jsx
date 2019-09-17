@@ -28,7 +28,7 @@ export default class DisplayComments extends React.Component {
                     {this.state.comments.map((comment) => {
                         return (
 
-                              <p> {comment.name} : {comment.film_title}
+                              <p> {comment.name} : {comment.film_title} -
                               {comment.comment} - {comment.created}
                               
                              </p>  
