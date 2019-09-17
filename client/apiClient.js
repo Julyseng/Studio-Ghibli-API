@@ -12,3 +12,8 @@ export function postComments (data) {
   .send(data)
   .catch(e => { console.log(e)})
 }
+
+export function getComments ( ) {
+  return request.get(rootUrl + '/comments')
+}
+

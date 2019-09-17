@@ -3,7 +3,7 @@ import { getFilms } from '../apiClient'
 import Display from './Display'
 import Navs from './Nav'
 import Comment from './Comment'
-import PostComments from './PostComments'
+import DisplayComments from './DisplayComments'
 
 class App extends React.Component {
   state = {
@@ -24,7 +24,7 @@ class App extends React.Component {
 
         <Display />
         <Comment />
-        <PostComments />
+        <DisplayComments />
       </React.Fragment>
       
     )

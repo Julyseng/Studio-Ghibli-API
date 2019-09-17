@@ -28,7 +28,9 @@ function deleteFilms() {
 function getComments () {
   return db('comments').select()
 }
+
 function postComments(data) {
-  return db('comments').insert(data)
+  return db('comments').insert(data)//promise
+  
 }
 

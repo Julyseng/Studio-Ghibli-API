@@ -18,6 +18,11 @@ server.post('/api/v1/postComment', (req, res) => {
     }) )
 })
 
+server.get('/api/v1/comments', async (req,res) => {
+    const comments = await db.getComments(req.body)
+    res.send(comments)
+})
+
 
 
 module.exports = server
