@@ -8,6 +8,17 @@ export default class DisplayComments extends React.Component {
         this.state = {
             comments: [ ],
         }
+        this.handleAddChange = this.handleAddChange.bind(this);
+    }
+
+    handleAddChange = e => {
+        this.setState({
+            adding: {
+                ...this.state.adding,
+                [e.target.name]: e.target.value
+            }
+        })
+
     }
 
     componentDidMount() {
@@ -28,10 +39,14 @@ export default class DisplayComments extends React.Component {
                     {this.state.comments.map((comment) => {
                         return (
 
-                              <p> {comment.name} : {comment.film_title} -
-                              {comment.comment} - {comment.created}
+                            <ul className='commentsForm' value={comment} onChange={this.handleAddChange}>
+                                    <li>User_Name : {comment.name} -
+                                     film_title: {comment.film_title} -
+                                        Comment: {comment.comment} - 
+                                        Date_Created: {comment.created}
                               
-                             </p>  
+                             </li>
+                            </ul> 
                             
                         )
                     })}
