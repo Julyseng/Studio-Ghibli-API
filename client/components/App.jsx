@@ -1,16 +1,10 @@
 import React from 'react'
-import { getFilms } from '../apiClient'
 import Display from './Display'
 import Navs from './Nav'
 import Comment from './Comment'
 import DisplayComments from './DisplayComments'
 
-class App extends React.Component {
-  state = {
-    films: []
-  }
-
-  render() {
+const App = () => {
     return (
 
       //header section
@@ -29,6 +23,6 @@ class App extends React.Component {
       
     )
   }
-}
+
 
 export default App

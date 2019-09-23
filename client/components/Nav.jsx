@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Navs = props => {
+    console.log(props)
     return (
         <React.Fragment>
             <ul>

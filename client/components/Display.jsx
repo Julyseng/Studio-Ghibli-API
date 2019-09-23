@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Button } from 'react-bootstrap'
 import { getFilms } from '../apiClient'
+import DisplayComments from './DisplayComments'
 
 class Display extends React.Component {
     state = {
@@ -42,7 +43,7 @@ class Display extends React.Component {
                                 <Button className="button" onClick={this.incrementLikes}> ❤️ Likes {this.state.count} </Button>
                             </Card.Body>
                         </Card>)}
-
+                        
                 </div>
             </div>
         )
